@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mobile Paradigm Consultancy Limited</title>
+<meta name="description" content="Mobile Paradigm Consultancy Limited is a UK mobile app consultancy. We design and build Android and iOS apps for clients.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --mist: #EEF2F4;
+    --panel: #FFFFFF;
+    --ink: #14232B;
+    --muted: #55656D;
+    --petrol: #0B5563;
+    --amber: #E9A23B;
+    --line: #D5DDE1;
+    --radius-device: 44px;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--mist);
+    color: var(--ink);
+    font: 400 1.0625rem/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  a { color: var(--petrol); text-underline-offset: 3px; }
+  a:focus-visible, .cta:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; border-radius: 6px; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 32px 16px 48px; }
+
+  /* Signature: the hero is a screen, and its status bar carries the company's facts */
+  .screen {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-device);
+    padding: 14px 28px 44px;
+    box-shadow: 0 1px 0 rgba(20,35,43,.04), 0 24px 48px -32px rgba(11,85,99,.35);
+  }
+  .status {
+    display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 6px 12px;
+    font: 500 .8125rem/1 ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    letter-spacing: .02em; color: var(--muted);
+    padding: 6px 4px 22px;
+  }
+  .status .led { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--amber); margin-right: 8px; vertical-align: 1px; }
+  h1 {
+    font-family: "Bricolage Grotesque", system-ui, sans-serif;
+    font-weight: 700; font-size: clamp(2.6rem, 8vw, 5.4rem); line-height: .95; letter-spacing: -.035em;
+    margin: 18px 0 10px; color: var(--ink);
+  }
+  h1 span { display: block; color: var(--petrol); }
+  .legal-name { margin: 0 0 26px; color: var(--muted); font-size: 1rem; }
+  .lede { font-size: clamp(1.15rem, 2.4vw, 1.4rem); line-height: 1.45; max-width: 34ch; margin: 0 0 30px; }
+  .cta {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--petrol); color: #fff; text-decoration: none;
+    padding: 14px 22px; border-radius: 999px; font-weight: 600;
+  }
+  .cta:hover { background: #094652; }
+
+  section { margin-top: 56px; }
+  h2 {
+    font-family: "Bricolage Grotesque", system-ui, sans-serif;
+    font-weight: 500; font-size: 1.5rem; letter-spacing: -.01em; margin: 0 0 18px;
+  }
+  .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .tile { background: var(--panel); border: 1px solid var(--line); border-radius: 26px; padding: 22px 22px 20px; }
+  .tile h3 { margin: 0 0 6px; font-size: 1.05rem; }
+  .tile p { margin: 0; color: var(--muted); font-size: .98rem; }
+
+  .process { max-width: 62ch; color: var(--ink); }
+
+  dl { display: grid; grid-template-columns: 210px 1fr; gap: 12px 24px; margin: 0; background: var(--panel); border: 1px solid var(--line); border-radius: 26px; padding: 24px; }
+  dt { color: var(--muted); }
+  dd { margin: 0; }
+
+  footer { margin-top: 48px; color: var(--muted); font-size: .9rem; }
+
+  @media (max-width: 640px) {
+    .screen { border-radius: 32px; padding: 12px 20px 32px; }
+    .grid { grid-template-columns: 1fr; }
+    dl { grid-template-columns: 1fr; gap: 2px; }
+    dd { margin-bottom: 12px; }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .status .led { animation: pulse 2.4s ease-in-out 3; }
+    @keyframes pulse { 50% { opacity: .35; } }
+  }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="screen" aria-labelledby="title">
+    <div class="status" aria-hidden="true">
+      <span><span class="led"></span>Est. 2014 · Maidstone, Kent</span>
+      <span>Co. No. 09295652</span>
+    </div>
+    <h1 id="title">Mobile <span>Paradigm</span></h1>
+    <p class="legal-name">Mobile Paradigm Consultancy Limited</p>
+    <p class="lede">We design and build Android and iOS apps for our clients, from first prototype to store release.</p>
+    <a class="cta" href="mailto:info@mobileparadigm.co.uk">Email us</a>
+  </header>
+
+  <section aria-labelledby="build">
+    <h2 id="build">What we build</h2>
+    <div class="grid">
+      <div class="tile"><h3>Android</h3><p>Native apps in Kotlin and Jetpack Compose.</p></div>
+      <div class="tile"><h3>iOS</h3><p>Native apps in Swift and SwiftUI.</p></div>
+      <div class="tile"><h3>Kotlin Multiplatform</h3><p>One shared codebase for business logic across Android and iOS.</p></div>
+      <div class="tile"><h3>React Native and Expo</h3><p>Cross-platform apps with over-the-air updates.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="how">
+    <h2 id="how">How we work</h2>
+    <p class="process">We work with organisations that need an app built or rebuilt: scoping the product, designing it, writing and testing the code, and publishing it to Google Play and the App Store under the client's own accounts.</p>
+  </section>
+
+  <section aria-labelledby="details">
+    <h2 id="details">Company details</h2>
+    <dl>
+      <dt>Registered name</dt><dd>Mobile Paradigm Consultancy Limited</dd>
+      <dt>Company number</dt><dd>09295652 (registered in England and Wales)</dd>
+      <dt>Registered office</dt><dd>8 Passmore Way, Tovil, Maidstone, Kent ME15 6AD, United Kingdom</dd>
+      <dt>Email</dt><dd><a href="mailto:info@mobileparadigm.co.uk">info@mobileparadigm.co.uk</a></dd>
+    </dl>
+  </section>
+
+  <footer>© Mobile Paradigm Consultancy Limited</footer>
+</main>
+</body>
+</html>
